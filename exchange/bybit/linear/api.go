@@ -3,10 +3,12 @@ package linear
 import (
 	"context"
 	"encoding/json"
-	"github.com/robinbraemer/bybitbot/exchange/bybit"
-	"github.com/robinbraemer/bybitbot/exchange/bybit/common"
-	. "github.com/robinbraemer/bybitbot/util"
+	"fmt"
+	"github.com/robinbraemer/bybitcli/exchange/bybit"
+	"github.com/robinbraemer/bybitcli/exchange/bybit/common"
+	. "github.com/robinbraemer/bybitcli/util"
 	"net/http"
+	"strings"
 	"time"
 )
 
@@ -60,6 +62,21 @@ func (s Side) Opposite() Side {
 		return Sell
 	}
 	return Buy
+}
+
+func (s *Side) UnmarshalJSON(d []byte) error {
+	var str string
+	if err := json.Unmarshal(d, &str); err != nil {
+		return err
+	}
+	str = strings.Title(str)
+	switch Side(str) {
+	case Buy, Sell:
+	default:
+		return fmt.Errorf("unknown side %q", str)
+	}
+	*s = Side(str)
+	return nil
 }
 
 type TimeInForce string

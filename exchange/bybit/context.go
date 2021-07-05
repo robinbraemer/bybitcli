@@ -2,7 +2,7 @@ package bybit
 
 import (
 	"context"
-	"github.com/robinbraemer/bybitbot/util"
+	"github.com/robinbraemer/bybitcli/util"
 	"net/http"
 	"time"
 )

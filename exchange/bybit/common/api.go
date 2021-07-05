@@ -2,8 +2,8 @@ package common
 
 import (
 	"context"
-	"github.com/robinbraemer/bybitbot/exchange/bybit"
-	"github.com/robinbraemer/bybitbot/util"
+	"github.com/robinbraemer/bybitcli/exchange/bybit"
+	"github.com/robinbraemer/bybitcli/util"
 	"net/http"
 	"time"
 )

@@ -1,16 +1,18 @@
-module github.com/robinbraemer/bybitbot
+module github.com/robinbraemer/bybitcli
 
 go 1.16
 
 require (
-	github.com/antihax/optional v1.0.0 // indirect
-	github.com/bybit-exchange/api-connectors v0.0.0-20210624090855-fdfb1a902c50 // indirect
-	github.com/chuckpreslar/emission v0.0.0-20170206194824-a7ddd980baf9
-	github.com/coinrust/crex v1.2.16
 	github.com/davecgh/go-spew v1.1.1
 	github.com/go-logr/logr v0.4.0
-	github.com/go-logr/zapr v0.4.0 // indirect
-	github.com/gorilla/websocket v1.4.2
-	github.com/recws-org/recws v1.3.1
-	github.com/tidwall/gjson v1.8.1
+	github.com/go-logr/zapr v0.4.0
+	github.com/kr/pretty v0.2.0 // indirect
+	github.com/pkg/errors v0.9.1 // indirect
+	github.com/stretchr/testify v1.7.0 // indirect
+	go.uber.org/zap v1.16.0
+	golang.org/x/lint v0.0.0-20200302205851-738671d3881b // indirect
+	golang.org/x/tools v0.0.0-20200501065659-ab2804fb9c9d // indirect
+	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
+	gopkg.in/yaml.v2 v2.3.0 // indirect
+	honnef.co/go/tools v0.0.1-2020.1.3 // indirect
 )
