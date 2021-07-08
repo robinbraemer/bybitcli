@@ -9,9 +9,9 @@ import (
 
 type Options struct {
 	APIKey, SecretKey string // Required
-	Testnet           bool   // Whether to use testnet
+	Mainnet           bool   // Whether to use mainnet or testnet
 	Log               util.Logger
-	Client            *http.Client
+	Client            *http.Client // for rest client
 }
 
 func New(ctx context.Context, opts Options) context.Context {
@@ -35,7 +35,7 @@ func FromContext(ctx context.Context) *Context {
 }
 
 func IsTestnet(ctx context.Context) bool {
-	return FromContext(ctx).Options.Testnet
+	return !FromContext(ctx).Options.Mainnet
 }
 
 func contextWithClient(ctx context.Context, client *Context) context.Context {

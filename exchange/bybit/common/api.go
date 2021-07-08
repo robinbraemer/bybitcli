@@ -11,12 +11,6 @@ import (
 const (
 	MainnetEndpoint = "https://api.bybit.com"
 	TestnetEndpoint = "https://api-testnet.bybit.com"
-
-	//MainnetWSPublicEndpoint  = "wss://stream.bybit.com/realtime_public"
-	//MainnetWSPrivateEndpoint = "wss://stream.bybit.com/realtime_private"
-	//
-	//TestnetWSPublicEndpoint  = "wss://stream-testnet.bybit.com/realtime_public"
-	//TestnetWSPrivateEndpoint = "wss://stream-testnet.bybit.com/realtime_private"
 )
 
 func SyncTime(ctx context.Context) error {
